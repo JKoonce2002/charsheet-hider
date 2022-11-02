@@ -2,20 +2,22 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-content: center;
+    width: 70%;
 }
-.nohead{
+header{
     display: flex;
     align-content: stretch;
     align-items: stretch;
 }
 .list{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100%;
 }
-li{
+.aScore{
     height: 80px;
     width: 70px;
     border: 1px solid black;
@@ -23,7 +25,7 @@ li{
     display: flex;
     flex-direction: column;
     border-radius: 10px;
-    margin-right: 15px;
+    margin-bottom: 15px;
 }
 .inscore{
     text-align: center;
@@ -50,4 +52,42 @@ li{
     font-size: 10px;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
+}
+.details{
+    width: 70%;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.dets{
+    padding: 10px 0px 5px 0px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.aDet{
+    width: 32%;
+    display: flex;
+    flex-direction: column-reverse;
+    padding-left: 10px;
+}
+.lDet{
+    margin-bottom: 5px;
+    color: gray;
+}
+.pDet{
+    border: 0;
+    border-bottom: 1px solid lightgray;
+}
+.name{
+    border: 1px solid black;
+    border-right: 0;
+    border-radius: 10px 0 0 10px;
+    padding: 5px 0;
+    width: 30%;
+    display: flex;
+    flex-direction: column-reverse;
+    bottom: 0;
+    top: 0;
+    margin: auto;
 }
