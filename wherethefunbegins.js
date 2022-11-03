@@ -73,7 +73,9 @@ if (safetyOff){
                 }
                 if(tetherScore >= 4){
                     cls.value = "Wizard 1";
-                    ego.value = "Fool";
+                }
+                if(tetherScore >= 5){
+                    ego.value = "The Fool";
                 }
             }
         }

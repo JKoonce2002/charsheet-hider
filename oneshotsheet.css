@@ -10,7 +10,7 @@ header{
     align-content: stretch;
     align-items: stretch;
 }
-.list{
+.list, .vitalslist{
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -90,4 +90,42 @@ header{
     bottom: 0;
     top: 0;
     margin: auto;
+}
+.profs{
+    width: 30%;
+    height: 100%;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.vitals{
+    width: 30%;
+    height: 100%;
+}
+.feats{
+    width: 30%;
+    height: 100%;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-bottom: 15px;
+}
+.vital{
+    height: 120px;
+    width: 105px;
+    border: 1px solid black;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    margin-right: 15px;
+}
+.vitalnum{
+    text-align: center;
+    font-size: 50px;
+    padding: 2px 0px 0px 0px;
+    width: 100%;
+    border: none;
 }
