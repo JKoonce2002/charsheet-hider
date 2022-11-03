@@ -33,6 +33,15 @@ if (safetyOff){
     let backy = document.getElementById("backy");
     let race = document.getElementById("race");
     let align = document.getElementById("align");
+    let skill = document.getElementById("skill");
+    let lang = document.getElementById("lang");
+    let weap = document.getElementById("weap");
+    let armor = document.getElementById("armor");
+    let tool = document.getElementById("tool");
+    let ac = document.getElementById("ac");
+    let hp = document.getElementById("hp");
+    let speed = document.getElementById("speed");
+    let featlist = document.getElementById("featlist");
 
     nameItem.addEventListener('input', (event)=>{
         if(players.includes(nameItem.value)){
@@ -44,6 +53,7 @@ if (safetyOff){
                 intmod.value = "+2";
                 chascore.value = "12";
                 chamod.value = "+1";
+                align.value = "Chaotic Neutral";
 
                 if(tetherScore >= 1){ //full base stats
                     strscore.value = "9";
