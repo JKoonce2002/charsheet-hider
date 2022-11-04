@@ -1,4 +1,4 @@
-const safetyOff = true;
+const safetyOff = false;
 
 console.log("It's starting!");
 
@@ -308,7 +308,7 @@ if (safetyOff){
                     var s2 = document.createElement('p');
                     var s3 = document.createElement('p');
                     var s4 = document.createElement('p');
-                    s1.appendChild(document.createTextNode("Insight"));
+                    s1.appendChild(document.createTextNode("Intimidation"));
                     s2.appendChild(document.createTextNode("Stealth"));
                     s3.appendChild(document.createTextNode("Persuasion"));
                     s4.appendChild(document.createTextNode("Stealth"));
@@ -627,25 +627,26 @@ if (safetyOff){
 
                     wisscore.value = "17";
                     wismod.value = "+3";
-                    dexscore.value = "16";
-                    dexmod.value = "+3";
-                    ac.value = "13";
-                    speed.value = "25";
+                    strscore.value = "10";
+                    strmod.value = "+0";
 
                     //languages
                     var lang1 = document.createElement('p');
-                    lang1.appendChild(document.createTextNode("Gnomish"));
+                    var lang2 = document.createElement('p');
+                    lang1.appendChild(document.createTextNode("Elvish"));
+                    lang2.appendChild(document.createTextNode("Giant"));
                     lang.appendChild(lang1);
+                    lang.appendChild(lang2);
 
                     //features
                     var f1 = document.createElement('li');
                     var f2 = document.createElement('li');
                     var f3 = document.createElement('li');
                     var f4 = document.createElement('li');
-                    f1.appendChild(document.createTextNode("Darkvision (60ft)"));
-                    f2.appendChild(document.createTextNode("Gnome Cunning"));
-                    f3.appendChild(document.createTextNode("Natural Illusionist"));
-                    f4.appendChild(document.createTextNode("Speak with Small Beasts"));
+                    f1.appendChild(document.createTextNode("Firbolg Magic"));
+                    f2.appendChild(document.createTextNode("Hidden Step"));
+                    f3.appendChild(document.createTextNode("Powerful Build"));
+                    f4.appendChild(document.createTextNode("Speech of Beast and Leaf"));
                     featlist.appendChild(f1);
                     featlist.appendChild(f2);
                     featlist.appendChild(f3);
@@ -653,16 +654,104 @@ if (safetyOff){
                 }
                 if(tetherScore == 3){
                     backy.value = "Cloistered Scholar";
+
+                    //proficiencies: skills
+                    var s1 = document.createElement('p');
+                    var s2 = document.createElement('p');
+                    s1.appendChild(document.createTextNode("History"));
+                    s2.appendChild(document.createTextNode("Nature"));
+                    skill.appendChild(s1);
+                    skill.appendChild(s2);
+
+                    //proficiencies: languages
+                    var lang1 = document.createElement('p');
+                    var lang2 = document.createElement('p');
+                    lang1.appendChild(document.createTextNode("Sylvan"));
+                    lang2.appendChild(document.createTextNode("Primordial"));
+                    lang.appendChild(lang1);
+                    lang.appendChild(lang2);
+
+                    //features
+                    var f1 = document.createElement('li');
+                    f1.appendChild(document.createTextNode("Library Access"));
+                    featlist.appendChild(f1);
                 }
                 if(tetherScore == 4){
                     cls.value = "Druid 1";
+
+                    //have hit dice now
+                    hp.value = "10";
+
+                    //proficiency: armor
+                    var a1 = document.createElement('p');
+                    var a2 = document.createElement('p');
+                    var a3 = document.createElement('p');
+                    a1.appendChild(document.createTextNode("Light armor"));
+                    a2.appendChild(document.createTextNode("Medium armor"));
+                    a3.appendChild(document.createTextNode("Shields"));
+                    armor.appendChild(a1);
+                    armor.appendChild(a2);
+                    armor.appendChild(a3);
+
+                    //proficiency: tools
+                    var tool1 = document.createElement('p');
+                    tool1.appendChild(document.createTextNode("Herbalism Kit"));
+                    tool.appendChild(tool1);
+
+                    //proficiencies: weapons
+                    var w1 = document.createElement('p');
+                    var w2 = document.createElement('p');
+                    var w3 = document.createElement('p');
+                    var w4 = document.createElement('p');
+                    var w5 = document.createElement('p');
+                    var w6 = document.createElement('p');
+                    var w7 = document.createElement('p');
+                    var w8 = document.createElement('p');
+                    var w9 = document.createElement('p');
+                    var w10 = document.createElement('p');
+                    w1.appendChild(document.createTextNode("Clubs"));
+                    w2.appendChild(document.createTextNode("Daggers"));
+                    w3.appendChild(document.createTextNode("Darts"));
+                    w4.appendChild(document.createTextNode("Javelins"));
+                    w5.appendChild(document.createTextNode("Maces"));
+                    w6.appendChild(document.createTextNode("Quarterstaffs"));
+                    w7.appendChild(document.createTextNode("Scimitars"));
+                    w8.appendChild(document.createTextNode("Sickles"));
+                    w9.appendChild(document.createTextNode("Slings"));
+                    w10.appendChild(document.createTextNode("Spears"));
+                    weap.appendChild(w1);
+                    weap.appendChild(w2);
+                    weap.appendChild(w3);
+                    weap.appendChild(w4);
+                    weap.appendChild(w5);
+                    weap.appendChild(w6);
+                    weap.appendChild(w7);
+                    weap.appendChild(w8);
+                    weap.appendChild(w9);
+                    weap.appendChild(w10);
+
+                    //proficiencies: skills
+                    var s1 = document.createElement('p');
+                    var s2 = document.createElement('p');
+                    s1.appendChild(document.createTextNode("Medicine"));
+                    s2.appendChild(document.createTextNode("Survival"));
+                    skill.appendChild(s1);
+                    skill.appendChild(s2);
+
+                    //features
+                    var f1 = document.createElement('li');
+                    var f2 = document.createElement('li');
+                    f1.appendChild(document.createTextNode("Druidic"));
+                    f2.appendChild(document.createTextNode("Spellccasting"));
+                    featlist.appendChild(f1);
+                    featlist.appendChild(f2);
                 }
                 if(tetherScore == 5){
                     ego.value = "Temperance";
 
                     //features
                     var f1 = document.createElement('li');
-                    f1.appendChild(document.createTextNode("Temperance's Balance"));
+                    f1.appendChild(document.createTextNode("Temperance's Clarity"));
                     featlist.appendChild(f1);
                 }
             }
