@@ -1,4 +1,4 @@
-const safetyOff = false;
+const safetyOff = true;
 
 console.log("It's starting!");
 
