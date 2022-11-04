@@ -49,11 +49,13 @@ if (safetyOff){
 
             if(cPlayer == "Jeff"){
                 //everyone gets a +2 ability and a +1 ability
-                intscore.value = "14";
-                intmod.value = "+2";
-                chascore.value = "12";
-                chamod.value = "+1";
-                align.value = "Chaotic Neutral";
+                if(tetherScore == 0){
+                    intscore.value = "14";
+                    intmod.value = "+2";
+                    chascore.value = "12";
+                    chamod.value = "+1";
+                    align.value = "Chaotic Neutral";
+                }
 
                 if(tetherScore == 1){ //full base stats
                     strscore.value = "9";
@@ -186,12 +188,13 @@ if (safetyOff){
 
             else if(cPlayer == "Kaitlyn"){
                 //everyone gets a +2 ability and a +1 ability
-                dexscore.value = "14";
+                if(tetherScore == 0) {dexscore.value = "14";
                 dexmod.value = "+2";
                 chascore.value = "12";
                 chamod.value = "+1";
                 align.value = "Chaotic Good";
                 ac.value = "12";
+                }
 
                 if(tetherScore == 1){ //full base stats
                     strscore.value = "13";
@@ -332,12 +335,13 @@ if (safetyOff){
 
             else if(cPlayer == "Nolan"){
                 //everyone gets a +2 ability and a +1 ability
-                intscore.value = "14";
+                if(tetherScore == 0) {intscore.value = "14";
                 intmod.value = "+2";
                 conscore.value = "12";
                 conmod.value = "+1";
                 hp.value = "5";
                 align.value = "Lawful Neutral";
+                }
 
                 if(tetherScore == 1){ //full base stats
                     strscore.value = "9";
@@ -452,16 +456,17 @@ if (safetyOff){
             }
             else if(cPlayer == "Peyton"){
                 //everyone gets a +2 ability and a +1 ability
-                wisscore.value = "14";
+                if(tetherScore == 0) {wisscore.value = "14";
                 wismod.value = "+2";
                 dexscore.value = "12";
                 dexmod.value = "+1";
                 ac.value = "11";
                 align.value = "Neutral Good";
+                }
 
                 if(tetherScore == 1){ //full base stats
-                    strscore.value = "11";
-                    strmod.value = "+0";
+                    strscore.value = "13";
+                    strmod.value = "+1";
                     dexscore.value = "15";
                     dexmod.value = "+2";
                     conscore.value = "11";
@@ -470,30 +475,86 @@ if (safetyOff){
                     intmod.value = "+2";
                     wisscore.value = "14";
                     wismod.value = "+1";
-                    chascore.value = "13";
-                    chamod.value = "+1";
+                    chascore.value = "11";
+                    chamod.value = "+0";
                     ac.value = "12";
                 }
                 if(tetherScore == 2){
-                    race.value = "Gnome";
+                    race.value = "Forest Gnome";
+
+                    intscore.value = "18";
+                    intmod.value = "+4";
+                    dexscore.value = "16";
+                    dexmod.value = "+3";
+                    ac.value = "13";
+                    speed.value = "25";
+
+                    //languages
+                    var lang1 = document.createElement('p');
+                    lang1.appendChild(document.createTextNode("Gnomish"));
+                    lang.appendChild(lang1);
+
+                    //features
+                    var f1 = document.createElement('li');
+                    var f2 = document.createElement('li');
+                    var f3 = document.createElement('li');
+                    var f4 = document.createElement('li');
+                    f1.appendChild(document.createTextNode("Darkvision (60ft)"));
+                    f2.appendChild(document.createTextNode("Gnome Cunning"));
+                    f3.appendChild(document.createTextNode("Natural Illusionist"));
+                    f4.appendChild(document.createTextNode("Speak with Small Beasts"));
+                    featlist.appendChild(f1);
+                    featlist.appendChild(f2);
+                    featlist.appendChild(f3);
+                    featlist.appendChild(f4);
                 }
                 if(tetherScore == 3){
-                    backy.value = "Guild Artisan";
+                    backy.value = " Artisan";
+
+                    //proficiencies: skills
+                    var s1 = document.createElement('p');
+                    var s2 = document.createElement('p');
+                    s1.appendChild(document.createTextNode("Insight"));
+                    s2.appendChild(document.createTextNode("Persuasion"));
+                    skill.appendChild(s1);
+                    skill.appendChild(s2);
+
+                    //proficiencies: tools
+                    var tool1 = document.createElement('p');
+                    tool1.appendChild(document.createTextNode("Smith's tools"));
+                    tool.appendChild(tool1);
+
+                    //proficiencies: languages
+                    var lang1 = document.createElement('p');
+                    lang1.appendChild(document.createTextNode("Undercommon"));
+                    lang.appendChild(lang1);
+
+                    //features
+                    var f1 = document.createElement('li');
+                    f1.appendChild(document.createTextNode("Known Expert"));
+                    featlist.appendChild(f1);
                 }
                 if(tetherScore == 4){
                     cls.value = "Artificer 1";
                 }
                 if(tetherScore == 5){
                     ego.value = "The Magician";
+
+                    //features
+                    var f1 = document.createElement('li');
+                    f1.appendChild(document.createTextNode("Magician's Court"));
+                    featlist.appendChild(f1);
                 }
             }
-            if(cPlayer == "Jeff"){
+            if(cPlayer == "Ash"){
                 //everyone gets a +2 ability and a +1 ability
-                dexscore.value = "14";
-                dexmod.value = "+2";
-                chascore.value = "12";
-                chamod.value = "+1";
-                align.value = "Chaotic Neutral";
+                if(tetherScore == 0) {
+                    intscore.value = "14";
+                    intmod.value = "+2";
+                    wisscore.value = "12";
+                    wismod.value = "+1";
+                    align.value = "Neutral Good";
+                }
 
                 if(tetherScore == 1){ //full base stats
                     strscore.value = "9";
@@ -504,32 +565,39 @@ if (safetyOff){
                     conmod.value = "+2";
                     intscore.value = "16";
                     intmod.value = "+3";
-                    wisscore.value = "13";
-                    wismod.value = "+1";
-                    chascore.value = "15";
-                    chamod.value = "+2";
+                    wisscore.value = "15";
+                    wismod.value = "+2";
+                    chascore.value = "13";
+                    chamod.value = "+1";
                     hp.value = "6";
                 }
                 if(tetherScore == 2){
-                    race.value = "Half-Elf";
+                    race.value = "Firbolg";
                 }
                 if(tetherScore == 3){
-                    backy.value = "Anthropologist";
+                    backy.value = "Cloistered Scholar";
                 }
                 if(tetherScore == 4){
-                    cls.value = "Wizard 1";
+                    cls.value = "Druid 1";
                 }
                 if(tetherScore == 5){
-                    ego.value = "The Fool";
+                    ego.value = "Temperance";
+
+                    //features
+                    var f1 = document.createElement('li');
+                    f1.appendChild(document.createTextNode("Temperance's Balance"));
+                    featlist.appendChild(f1);
                 }
             }
-            if(cPlayer == "Jeff"){
+            if(cPlayer == "Peri"){
                 //everyone gets a +2 ability and a +1 ability
-                dexscore.value = "14";
-                dexmod.value = "+2";
-                chascore.value = "12";
-                chamod.value = "+1";
-                align.value = "Chaotic Neutral";
+                if(tetherScore == 0) {
+                    dexscore.value = "14";
+                    dexmod.value = "+2";
+                    chascore.value = "12";
+                    chamod.value = "+1";
+                    align.value = "Chaotic Neutral";
+                }
 
                 if(tetherScore == 1){ //full base stats
                     strscore.value = "9";
