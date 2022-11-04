@@ -281,6 +281,11 @@ if (safetyOff){
                     a1.appendChild(document.createTextNode("Light armor"));
                     armor.appendChild(a1);
 
+                    //proficiency: tools
+                    var tool1 = document.createElement('p');
+                    tool1.appendChild(document.createTextNode("Thieves' Tools"));
+                    tool.appendChild(tool1);
+
                     //proficiencies: weapons
                     var w1 = document.createElement('p');
                     var w2 = document.createElement('p');
@@ -469,8 +474,8 @@ if (safetyOff){
                     strmod.value = "+1";
                     dexscore.value = "15";
                     dexmod.value = "+2";
-                    conscore.value = "11";
-                    conmod.value = "+0";
+                    conscore.value = "9";
+                    conmod.value = "-1";
                     intscore.value = "16";
                     intmod.value = "+2";
                     wisscore.value = "14";
@@ -536,6 +541,52 @@ if (safetyOff){
                 }
                 if(tetherScore == 4){
                     cls.value = "Artificer 1";
+
+                    //have hit dice now
+                    hp.value = "7";
+
+                    //proficiency: armor
+                    var a1 = document.createElement('p');
+                    var a2 = document.createElement('p');
+                    var a3 = document.createElement('p');
+                    a1.appendChild(document.createTextNode("Light armor"));
+                    a2.appendChild(document.createTextNode("Medium armor"));
+                    a3.appendChild(document.createTextNode("Shields"));
+                    armor.appendChild(a1);
+                    armor.appendChild(a2);
+                    armor.appendChild(a3);
+
+                    //proficiency: tools
+                    var tool1 = document.createElement('p');
+                    var tool2 = document.createElement('p');
+                    var tool3 = document.createElement('p');
+                    tool1.appendChild(document.createTextNode("Thieves' Tools"));
+                    tool2.appendChild(document.createTextNode("Tinker's Tools"));
+                    tool3.appendChild(document.createTextNode("Leatherworker's Tools"));
+                    tool.appendChild(tool1);
+                    tool.appendChild(tool2);
+                    tool.appendChild(tool3);
+
+                    //proficiencies: weapons
+                    var w1 = document.createElement('p');
+                    w1.appendChild(document.createTextNode("Simple weapons"));
+                    weap.appendChild(w1);
+
+                    //proficiencies: skills
+                    var s1 = document.createElement('p');
+                    var s2 = document.createElement('p');
+                    s1.appendChild(document.createTextNode("Sleight of Hand"));
+                    s2.appendChild(document.createTextNode("Arcana"));
+                    skill.appendChild(s1);
+                    skill.appendChild(s2);
+
+                    //features
+                    var f1 = document.createElement('li');
+                    var f2 = document.createElement('li');
+                    f1.appendChild(document.createTextNode("Magical Tinkering"));
+                    f2.appendChild(document.createTextNode("Spellccasting"));
+                    featlist.appendChild(f1);
+                    featlist.appendChild(f2);
                 }
                 if(tetherScore == 5){
                     ego.value = "The Magician";
@@ -573,6 +624,32 @@ if (safetyOff){
                 }
                 if(tetherScore == 2){
                     race.value = "Firbolg";
+
+                    wisscore.value = "17";
+                    wismod.value = "+3";
+                    dexscore.value = "16";
+                    dexmod.value = "+3";
+                    ac.value = "13";
+                    speed.value = "25";
+
+                    //languages
+                    var lang1 = document.createElement('p');
+                    lang1.appendChild(document.createTextNode("Gnomish"));
+                    lang.appendChild(lang1);
+
+                    //features
+                    var f1 = document.createElement('li');
+                    var f2 = document.createElement('li');
+                    var f3 = document.createElement('li');
+                    var f4 = document.createElement('li');
+                    f1.appendChild(document.createTextNode("Darkvision (60ft)"));
+                    f2.appendChild(document.createTextNode("Gnome Cunning"));
+                    f3.appendChild(document.createTextNode("Natural Illusionist"));
+                    f4.appendChild(document.createTextNode("Speak with Small Beasts"));
+                    featlist.appendChild(f1);
+                    featlist.appendChild(f2);
+                    featlist.appendChild(f3);
+                    featlist.appendChild(f4);
                 }
                 if(tetherScore == 3){
                     backy.value = "Cloistered Scholar";
